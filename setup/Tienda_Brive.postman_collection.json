@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "c532e890-08bd-4fe1-b142-13cc66d358c2",
+		"name": "Tienda_Brive",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45053559"
+	},
+	"item": [
+		{
+			"name": "InventarioGeneral_Sede",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5048/api/Inventario/General",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5048",
+					"path": [
+						"api",
+						"Inventario",
+						"General"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarCompra_Sede",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idSucursal\": 3,\r\n  \"detalles\": [\r\n    {\r\n      \"productoId\": 5,\r\n      \"cantidad\": 20\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5048/api/Compra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5048",
+					"path": [
+						"api",
+						"Compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto_Consultar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idSucursal\": 3,\r\n  \"detalles\": [\r\n    {\r\n      \"productoId\": 5,\r\n      \"cantidad\": 20\r\n    }\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5048/api/Producto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5048",
+					"path": [
+						"api",
+						"Producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto_Crear",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Oreos\",\r\n  \"descripcion\": \"Galletas\",\r\n  \"precio\": 20.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5048/api/Producto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5048",
+					"path": [
+						"api",
+						"Producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto_Actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idProducto\": 6,\r\n  \"nombre\": \"test1\",\r\n  \"descripcion\": \"test\",\r\n  \"precio\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5048/api/Producto/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5048",
+					"path": [
+						"api",
+						"Producto",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HistorialVentas_Sede",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Pepsi\",\r\n  \"descripcion\": \"Refresco\",\r\n  \"precio\": 15\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5048/api/Venta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5048",
+					"path": [
+						"api",
+						"Venta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InventarioSucursal_Sucursal",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Pepsi\",\r\n  \"descripcion\": \"Refresco\",\r\n  \"precio\": 15\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5048/api/Inventario/Sucursal/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5048",
+					"path": [
+						"api",
+						"Inventario",
+						"Sucursal",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarVenta_Sucursal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idSucursal\": 2,\r\n  \"detalles\": [\r\n    {\r\n      \"productoId\": 3,\r\n      \"cantidad\": 1\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5048/api/Venta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5048",
+					"path": [
+						"api",
+						"Venta"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
