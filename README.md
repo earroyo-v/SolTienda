@@ -22,6 +22,21 @@ Sistema de gestión de productos, compras y ventas para sucursales. Diseñado co
 
 ---
 
+## Endpoints principales
+
+| Método | Ruta                                               | Descripción                          |
+|--------|----------------------------------------------------|--------------------------------------|
+| GET    | http://localhost:5048/api/Inventario/General       | Consultar inventario general         |
+| POST   | http://localhost:5048/api/Compra                   | Registrar compra en sede             |
+| POST   | http://localhost:5048/api/Venta                    | Registrar venta en sucursal          |
+| GET    | http://localhost:5048/api/Producto                 | Consultar productos                  |
+| POST   | http://localhost:5048/api/Producto                 | Crear nuevo producto                 |
+| PUT    | http://localhost:5048/api/Producto /{id}           | Actualizar producto existente        |
+| GET    | http://localhost:5048/api/Venta                    | Consultar historial de ventas        |
+| GET    | http://localhost:5048/api/Inventario/Sucursal      | Inventario por sucursal              |
+
+---
+
 ## Base de datos
 
 1. Ejecuta el script `SolTienda_DB.sql` ubicado en la carpeta `setup\Scripts` para crear la base de datos y sus tablas relacionadas.
@@ -48,21 +63,6 @@ Cada tabla está relacionada mediante claves foráneas para mantener la integrid
 "ConnectionStrings": {
   "sql": "Server=.; Database=EXAMEN; Trusted_Connection=SSPI;MultipleActiveResultSets=true;Trust Server Certificate=true"
 }
-
----
-
-## Endpoints principales
-
-| Método | Ruta                                               | Descripción                          |
-|--------|----------------------------------------------------|--------------------------------------|
-| GET    | http://localhost:5048/api/Inventario/General       | Consultar inventario general         |
-| POST   | http://localhost:5048/api/Compra                   | Registrar compra en sede             |
-| POST   | http://localhost:5048/api/Venta                    | Registrar venta en sucursal          |
-| GET    | http://localhost:5048/api/Producto                 | Consultar productos                  |
-| POST   | http://localhost:5048/api/Producto                 | Crear nuevo producto                 |
-| PUT    | http://localhost:5048/api/Producto /{id}           | Actualizar producto existente        |
-| GET    | http://localhost:5048/api/Venta                    | Consultar historial de ventas        |
-| GET    | http://localhost:5048/api/Inventario/Sucursal      | Inventario por sucursal              |
 
 
 
