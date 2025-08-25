@@ -17,7 +17,7 @@ namespace Tienda.Infrastructure.Repositories
         {
             _db = db;
         }
-        public async Task Agregar(Domain.Entities.Compra compra)
+        public async Task<int> Agregar(Domain.Entities.Compra compra)
         {
             var c = new Persistence.Compra
             {
@@ -34,6 +34,8 @@ namespace Tienda.Infrastructure.Repositories
 
             await _db.Compras.AddAsync(c);
             await _db.SaveChangesAsync();
+
+            return c.IdCompra;
         }
 
         public async Task Editar(Domain.Entities.Compra compra)

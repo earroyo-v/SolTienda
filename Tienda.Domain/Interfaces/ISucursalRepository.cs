@@ -11,7 +11,7 @@ namespace Tienda.Domain.Interfaces
     {
         Task<Sucursal> ObtenerPorId(int id);
         Task<List<Sucursal>> ObtenerTodo();
-        Task Agregar(Sucursal sucursal);
+        Task<int> Agregar(Sucursal sucursal);
         Task Editar(Sucursal sucursal);
     }
 }

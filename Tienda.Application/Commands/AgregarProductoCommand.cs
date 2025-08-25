@@ -25,7 +25,8 @@ namespace Tienda.Application.Commands
                 Descripcion = request.Descripcion,
                 Precio = request.Precio
             };
-            await _Repository.Agregar(p);
+            int id = await _Repository.Agregar(p);
+            p.IdProducto = id;
             return p;
         }
     }

@@ -16,7 +16,7 @@ namespace Tienda.Domain.Entities
         public Compra(int sucursalId)
         {
             IdSucursal = sucursalId;
-            FechaCompra = DateTime.UtcNow;
+            FechaCompra = DateTime.Now;
             //Total = total;
         }
 

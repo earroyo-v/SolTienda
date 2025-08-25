@@ -23,6 +23,7 @@ Sistema de gestión de productos, compras y ventas para sucursales. Diseñado co
 ---
 
 ## Endpoints principales
+- La coleccion de endpoints para pruebas(Postman) se encuentra en la carpeta `setup`
 
 | Método | Ruta                                               | Descripción                          |
 |--------|----------------------------------------------------|--------------------------------------|

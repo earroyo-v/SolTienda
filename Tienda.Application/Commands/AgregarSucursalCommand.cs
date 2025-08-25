@@ -22,8 +22,8 @@ namespace Tienda.Application.Commands
         {
             var sucursal = new Sucursal(request.nombre, request.direccion, request.sede);
 
-            await _sucursalRepository.Agregar(sucursal);
-
+            int id = await _sucursalRepository.Agregar(sucursal);
+            sucursal.IdSucursal = id;
             return sucursal;
         }
     }

@@ -18,7 +18,7 @@ namespace Tienda.Infrastructure.Repositories
             _db = db;
         }
 
-        public async Task Agregar(Domain.Entities.Sucursal sucursal)
+        public async Task<int> Agregar(Domain.Entities.Sucursal sucursal)
         {
             var s = new Persistence.Sucursal()
             {
@@ -28,6 +28,8 @@ namespace Tienda.Infrastructure.Repositories
             };
             await _db.Sucursals.AddAsync(s);
             await _db.SaveChangesAsync();
+
+            return s.IdSucursal;
         }
 
         public Task Editar(Domain.Entities.Sucursal sucursal)

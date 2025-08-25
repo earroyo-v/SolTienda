@@ -17,7 +17,7 @@ namespace Tienda.Infrastructure.Repositories
         {
             _db = db;
         }
-        public async Task Agregar(Venta venta)
+        public async Task<int> Agregar(Venta venta)
         {
             var v = new Ventum
             {
@@ -34,6 +34,8 @@ namespace Tienda.Infrastructure.Repositories
 
             await _db.Venta.AddAsync(v);
             await _db.SaveChangesAsync();
+
+            return v.IdVenta;
         }
 
         public async Task Editar(Venta venta)

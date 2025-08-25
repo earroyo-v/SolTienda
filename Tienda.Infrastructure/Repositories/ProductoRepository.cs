@@ -34,7 +34,7 @@ namespace Tienda.Infrastructure.Repositories
             }
             return ls;
         }
-        public async Task Agregar(Domain.Entities.Producto producto)
+        public async Task<int> Agregar(Domain.Entities.Producto producto)
         {
             var p = new Persistence.Producto()
             {
@@ -44,6 +44,8 @@ namespace Tienda.Infrastructure.Repositories
             };
             await _db.Productos.AddAsync(p);
             await _db.SaveChangesAsync();
+
+            return p.IdProducto;
         }
         public async Task Editar(Domain.Entities.Producto producto)
         {

@@ -48,7 +48,8 @@ namespace Tienda.Application.Commands
                 }
             }
 
-            await _CompraRepository.Agregar(compra);
+            int id = await _CompraRepository.Agregar(compra);
+            compra.IdCompra = id;
             return compra;
         }
     }

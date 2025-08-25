@@ -20,7 +20,7 @@ namespace Tienda.Domain.Entities
                 throw new ArgumentException("Sucursal inválida");
 
             IdSucursal = sucursalId;
-            FechaVenta = DateTime.UtcNow;
+            FechaVenta = DateTime.Now;
         }
 
         public void AgregarDetalle(int productoId, int cantidad, decimal precioUnitario)
