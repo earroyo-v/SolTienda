@@ -44,7 +44,7 @@ Cada tabla está relacionada mediante claves foráneas para mantener la integrid
 
 2. Verifica que la cadena de conexión en `appsettings.json` apunte correctamente a tu instancia de SQL Server:
 
-json
+```json
 "ConnectionStrings": {
   "sql": "Server=.; Database=EXAMEN; Trusted_Connection=SSPI;MultipleActiveResultSets=true;Trust Server Certificate=true"
 }
