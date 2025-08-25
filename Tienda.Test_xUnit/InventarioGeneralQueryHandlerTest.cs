@@ -6,7 +6,7 @@ using Tienda.Domain.Entities;
 
 namespace Tienda.Test_xUnit
 {
-    public class UnitTest1
+    public class InventarioGeneralQueryHandlerTest
     {
         [Fact]
         public async Task InventarioGeneral_DeberiaRetornarListaDeDTOs()
@@ -15,8 +15,8 @@ namespace Tienda.Test_xUnit
             // Arrange
             var inventarioMock = new List<ConsultarInventarioDTO>
             {
-                new ConsultarInventarioDTO { idSucursal = 1, Sucursal="Norte",Producto = "Teclado", Cantidad = 5 ,PrecioUnitario=20},
-                new ConsultarInventarioDTO { idSucursal = 2, Sucursal="Sur",Producto = "Monitor", Cantidad = 3 ,PrecioUnitario=150}
+                new ConsultarInventarioDTO { idSucursal = 1, Sucursal="Norte",Producto = "Papas", Cantidad = 5 ,PrecioUnitario=20},
+                new ConsultarInventarioDTO { idSucursal = 2, Sucursal="Sur",Producto = "Refresco", Cantidad = 3 ,PrecioUnitario=20}
             };
 
             var repoMock = new Mock<IConsultarInventarioRepository>();
@@ -30,7 +30,7 @@ namespace Tienda.Test_xUnit
 
             // Assert
             Assert.Equal(2, result.Count);
-            Assert.Contains(result, p => p.Producto == "Teclado");
+            Assert.Contains(result, p => p.Producto == "Papas");
         }
     }
 }
