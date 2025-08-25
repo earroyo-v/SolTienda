@@ -49,7 +49,7 @@ Cada tabla está relacionada mediante claves foráneas para mantener la integrid
   "sql": "Server=.; Database=EXAMEN; Trusted_Connection=SSPI;MultipleActiveResultSets=true;Trust Server Certificate=true"
 }
 
---
+---
 
 ## Endpoints principales
 
